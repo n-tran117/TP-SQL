@@ -1,0 +1,53 @@
+INSERT INTO `student` (`name`, `firstname`, `postalcod`, `city`) VALUES ('Dupont', 'Jean', '', 'Lille');
+INSERT INTO `student` (`name`, `firstname`, `postalcod`, `city`) VALUES ('Durand', 'Jack', '', 'Lille');
+INSERT INTO `student` (`name`, `firstname`, `postalcod`, `city`) VALUES ('Martin', 'Jerome', '', 'Lille');
+INSERT INTO `student` (`name`, `firstname`, `city`) VALUES ('Simon', 'Alexie', 'Maison-Alforts');
+INSERT INTO `student` (`name`, `firstname`, `city`) VALUES ('Tran', 'Nicolas', 'Maison-Alforts');
+INSERT INTO `student` (`name`, `firstname`, `city`) VALUES ('Ing', 'Kevin', 'Villejuif');
+INSERT INTO `student` (`name`, `firstname`, `city`) VALUES ('Cerezo', 'Pascal', 'Paris');
+INSERT INTO `student` (`name`, `firstname`, `city`) VALUES ('Granet', 'William', 'Campagne');
+
+INSERT INTO `matter` (`codemat`, `wording`, `coef`) VALUES ('a', 'arithmetic', '1');
+INSERT INTO `matter` (`codemat`, `wording`, `coef`) VALUES ('b', 'biologic', '1.5');
+INSERT INTO `matter` (`codemat`, `wording`, `coef`) VALUES ('c', 'c programing', '2');
+INSERT INTO `matter` (`codemat`, `wording`, `coef`) VALUES ('d', 'data sorting', '0.5');
+
+
+INSERT INTO `test` (`testdate`, `place`, `codemat`) VALUES ('2014-1-2', 'Paris', 'a');
+INSERT INTO `test` (`testdate`, `place`, `codemat`) VALUES ('2014-3-5', 'Lyon', 'b');
+INSERT INTO `test` (`testdate`, `place`, `codemat`) VALUES ('2014-5-15', 'Lille', 'c');
+INSERT INTO `test` (`testdate`, `place`, `codemat`) VALUES ('2014-4-20', 'Villejuif', 'c');
+INSERT INTO `test` (`testdate`, `place`, `codemat`) VALUES ('2014-2-24', 'London', 'a');
+INSERT INTO `test` (`testdate`, `place`, `codemat`) VALUES ('2014-6-10', 'Cardif', 'd');
+
+INSERT INTO `notation` (`numstud`, `numtest`, `score`) VALUES ('1', '1', '10');
+INSERT INTO `notation` (`numstud`, `numtest`, `score`) VALUES ('2', '1', '11');
+INSERT INTO `notation` (`numstud`, `numtest`, `score`) VALUES ('3', '1', '12');
+INSERT INTO `notation` (`numstud`, `numtest`, `score`) VALUES ('4', '1', '13');
+INSERT INTO `notation` (`numstud`, `numtest`, `score`) VALUES ('5', '1', '14');
+INSERT INTO `notation` (`numstud`, `numtest`, `score`) VALUES ('6', '1', '15');
+INSERT INTO `notation` (`numstud`, `numtest`, `score`) VALUES ('7', '1', '16');
+INSERT INTO `notation` (`numstud`, `numtest`, `score`) VALUES ('8', '1', '17');
+INSERT INTO `notation` (`numstud`, `numtest`, `score`) VALUES ('1', '2', '18');
+INSERT INTO `notation` (`numstud`, `numtest`, `score`) VALUES ('2', '2', '19');
+INSERT INTO `notation` (`numstud`, `numtest`, `score`) VALUES ('3', '3', '20');
+INSERT INTO `notation` (`numstud`, `numtest`, `score`) VALUES ('4', '3', '20');
+INSERT INTO `notation` (`numstud`, `numtest`, `score`) VALUES ('5', '3', '10.75');
+INSERT INTO `notation` (`numstud`, `numtest`, `score`) VALUES ('6', '3', '12.25');
+INSERT INTO `notation` (`numstud`, `numtest`, `score`) VALUES ('7', '3', '15.5');
+INSERT INTO `notation` (`numstud`, `numtest`, `score`) VALUES ('8', '3', '18.35');
+INSERT INTO `notation` (`numstud`, `numtest`, `score`) VALUES ('1', '3', '11.85');
+INSERT INTO `notation` (`numstud`, `numtest`, `score`) VALUES ('2', '4', '19.10');
+INSERT INTO `notation` (`numstud`, `numtest`, `score`) VALUES ('3', '4', '1');
+INSERT INTO `notation` (`numstud`, `numtest`, `score`) VALUES ('4', '4', '2');
+INSERT INTO `notation` (`numstud`, `numtest`, `score`) VALUES ('5', '5', '3');
+INSERT INTO `notation` (`numstud`, `numtest`, `score`) VALUES ('7', '5', '5');
+INSERT INTO `notation` (`numstud`, `numtest`, `score`) VALUES ('8', '5', '6');
+INSERT INTO `notation` (`numstud`, `numtest`, `score`) VALUES ('1', '5', '7');
+INSERT INTO `notation` (`numstud`, `numtest`, `score`) VALUES ('2', '5', '8');
+INSERT INTO `notation` (`numstud`, `numtest`, `score`) VALUES ('3', '5', '9');
+INSERT INTO `notation` (`numstud`, `numtest`, `score`) VALUES ('4', '5', '5.5');
+INSERT INTO `notation` (`numstud`, `numtest`, `score`) VALUES ('5', '6', '3.25');
+INSERT INTO `notation` (`numstud`, `numtest`, `score`) VALUES ('6', '6', '6.75');
+INSERT INTO `notation` (`numstud`, `numtest`, `score`) VALUES ('7', '6', '8.35');
+

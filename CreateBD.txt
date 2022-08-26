@@ -1,0 +1,44 @@
+CREATE TABLE `student` (
+  `numstud` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(128) NULL,
+  `firstname` VARCHAR(128) NULL,
+  `dateofbirth` DATE NULL,
+  `street` VARCHAR(256) NULL,
+  `postalcod` VARCHAR(256) NULL,
+  `city` VARCHAR(256) NULL,
+  PRIMARY KEY (`numstud`));
+
+CREATE TABLE `matter` (
+  `codemat` VARCHAR(64) NOT NULL,
+  `wording` VARCHAR(128) NULL,
+  `coef` FLOAT NULL,
+  PRIMARY KEY (`codemat`));
+
+CREATE TABLE `test` (
+  `numtest` INT NOT NULL AUTO_INCREMENT,
+  `testdate` DATE NULL,
+  `place` VARCHAR(256) NULL,
+  `codemat` VARCHAR(256) NOT NULL,
+  PRIMARY KEY (`numtest`),
+  INDEX `codemat_idx` (`codemat` ASC),
+  CONSTRAINT `codemat`
+    FOREIGN KEY (`codemat`)
+    REFERENCES `matter` (`codemat`)
+    ON UPDATE NO ACTION);
+
+CREATE TABLE `notation` (
+  `numstud` INT NOT NULL,
+  `numtest` INT NOT NULL,
+  `score` FLOAT NULL,
+  PRIMARY KEY (`numstud`, `numtest`),
+  INDEX `numtest_idx` (`numtest` ASC),
+  CONSTRAINT `numstud`
+    FOREIGN KEY (`numstud`)
+    REFERENCES `student` (`numstud`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `numtest`
+    FOREIGN KEY (`numtest`)
+    REFERENCES `test` (`numtest`) 
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);

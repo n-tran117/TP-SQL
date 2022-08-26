@@ -1,0 +1,25 @@
+SELECT COUNT(*) FROM hnformation.test;
+
+SELECT name, firstname, score FROM hnformation.notation inner join student;
+
+SELECT score, name, firstname, wording
+FROM hnformation.notation
+inner join student on notation.numstud = student.numstud
+inner join test on notation.numtest = test.numtest
+inner join matter on matter.codemat = test.codemat;
+
+SELECT score FROM notation where score >= 10;
+
+SELECT name, firstname, score 
+FROM hnformation.notation
+inner join student on notation.numstud = student.numstud
+where score = 20;
+
+SELECT name, firstname, avg(score) 
+FROM hnformation.notation
+inner join student on notation.numstud = student.numstud
+GROUP BY notation.numstud;
+
+SELECT * FROM hnformation.test
+where testdate >= '2014-01-01' and testdate <= '2014-06-30';
+
