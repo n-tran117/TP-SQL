@@ -23,3 +23,25 @@ GROUP BY notation.numstud;
 SELECT * FROM hnformation.test
 where testdate >= '2014-01-01' and testdate <= '2014-06-30';
 
+SELECT numtest, testdate, place, wording FROM test
+inner join matter on test.codemat = matter.codemat
+
+SELECT name, firstname, avg(score) as average
+FROM hnformation.notation
+inner join student on notation.numstud = student.numstud
+GROUP BY notation.numstud
+order by average desc;
+
+SELECT wording, avg(score) as average
+FROM notation
+inner join test on notation.numtest = test.numtest
+inner join matter on matter.codemat = test.codemat
+GROUP BY matter.codemat;
+
+SELECT test.numtest, wording, avg(score) as average
+FROM notation
+inner join test on notation.numtest = test.numtest
+inner join student on notation.numtest = student.numstud
+inner join matter on matter.codemat = test.codemat
+GROUP BY test.numtest
+HAVING COUNT(*) < 6;
